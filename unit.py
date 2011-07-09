@@ -27,6 +27,8 @@ class RobotTest(unittest.TestCase):
             ).was_called().with_args("robocop", ANY_ARG)
         assert_that(self.robot.score, equal_to(10))
 
+
+class RobotMovesTests(unittest.TestCase):
     def test_move_to_cell_severals_times(self):
         server_proxy_mock = mock(ServerProxy())
         expect_call(server_proxy_mock.init)
