@@ -29,12 +29,8 @@
       <file leaf-file-name="unit.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="25" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.6440129">
-              <folding>
-                <marker date="1310225674000" expanded="true" signature="208:1384" placeholder="..." />
-                <marker date="1310225674000" expanded="true" signature="229:393" placeholder="..." />
-                <marker date="1310225674000" expanded="true" signature="1247:1384" placeholder="..." />
-              </folding>
+            <state line="95" column="48" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.38677686">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,8 +125,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Python's unittest.Unittests in RobotTest.test_move_to_cell_one_time">
     <configuration default="false" name="Unittests in RobotTest" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
@@ -257,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-5" width="1214" height="805" extended-state="6" />
+    <frame x="74" y="24" width="1214" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -320,35 +316,25 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/framework.py">
+    <entry file="file:///usr/lib/python2.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="357" column="0" selection-start="12336" selection-end="12336" vertical-scroll-proportion="0.33147633" />
       </provider>
     </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/unittest/case.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/framework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="12336" selection-end="12336" vertical-scroll-proportion="0.33147633">
-          <folding />
-        </state>
+        <state line="48" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="25" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.6440129">
-          <folding>
-            <marker date="1310225674000" expanded="true" signature="208:1384" placeholder="..." />
-            <marker date="1310225674000" expanded="true" signature="229:393" placeholder="..." />
-            <marker date="1310225674000" expanded="true" signature="1247:1384" placeholder="..." />
-          </folding>
+        <state line="95" column="48" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.38677686">
+          <folding />
         </state>
       </provider>
     </entry>
