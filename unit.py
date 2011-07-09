@@ -29,41 +29,37 @@ class RobotTest(unittest.TestCase):
 
 
 class RobotMovesTests(unittest.TestCase):
+    def setUp(self):
+        self.server_proxy_mock = mock(ServerProxy())
+        expect_call(self.server_proxy_mock.init)
+        self.robot = Robot("robocop", self.server_proxy_mock)
+
+    def tearDown(self):
+        self.server_proxy_mock.assert_that_is_satisfied()
+
     def test_move_to_cell_severals_times(self):
-        server_proxy_mock = mock(ServerProxy())
-        expect_call(server_proxy_mock.init)
-        expect_call(server_proxy_mock.move
+        expect_call(self.server_proxy_mock.move
             ).returning({"OK",10}).times(2)
 
-        self.robot = Robot("robocop", server_proxy_mock)
         self.robot.start(total_moves = 2)
 
-        server_proxy_mock.assert_that_is_satisfied()
         assert_that(self.robot.score, equal_to(20))
 
     def test_game_over_in_a_move(self):
-        server_proxy_mock = mock(ServerProxy())
-        expect_call(server_proxy_mock.init)
-        expect_call(server_proxy_mock.move
+        expect_call(self.server_proxy_mock.move
             ).returning({"GameOver",0})
 
-        self.robot = Robot("robocop", server_proxy_mock)
         self.robot.start(total_moves = 2)
 
-        server_proxy_mock.assert_that_is_satisfied()
         assert_that(self.robot.status, equal_to("GameOver"))
         assert_that(self.robot.score, equal_to(0))
 
     def test_win_in_a_move(self):
-        server_proxy_mock = mock(ServerProxy())
-        expect_call(server_proxy_mock.init)
-        expect_call(server_proxy_mock.move
+        expect_call(self.server_proxy_mock.move
             ).returning({"YouWin",10})
 
-        self.robot = Robot("robocop", server_proxy_mock)
         self.robot.start(total_moves = 2)
 
-        server_proxy_mock.assert_that_is_satisfied()
         assert_that(self.robot.status, equal_to("YouWin"))
         assert_that(self.robot.score, equal_to(10))
 
