@@ -5,12 +5,13 @@ from hamcrest.core.core.isequal import equal_to
 from hamcrest.core.core.isnot import is_not
 from hamcrest.library.number.ordering_comparison import greater_than_or_equal_to, less_than_or_equal_to
 from pyDoubles.framework import *
+from robot import *
 
 __author__ = 'rubenbp'
 
 class RobotInitializeTest(unittest.TestCase):
     def setUp(self):
-        self.server_proxy = spy(ServerProxy())
+        self.server_proxy = spy(ServerProxy(None))
         when(self.server_proxy.move).then_return(("OK", 10))
 
         next_cell_calculator = stub(NextCellCalculator(0, 100))
@@ -46,7 +47,7 @@ class RobotMovesTests(unittest.TestCase):
             "robocop", self.server_proxy_stub, next_cell_calculator)
 
     def test_move_to_cell_severals_times(self):
-        server_proxy_spy = spy(ServerProxy())
+        server_proxy_spy = spy(ServerProxy(None))
         when(server_proxy_spy.move).then_return(("OK", 10))
         self.robot.server_proxy = server_proxy_spy
 
@@ -97,47 +98,3 @@ class NextCellCalculatorTests(unittest.TestCase):
             assert_that(
                 next_cell_calculator.next(),
                 is_not(equal_to(next_cell_calculator.next())))
-
-class NextCellCalculator():
-    def __init__(self, min_cell, max_cell):
-        self.min_cell = min_cell
-        self.max_cell = max_cell
-        self.last_cell = self.min_cell
-
-    def next(self):
-        self.last_cell += 1
-        if self.last_cell > self.max_cell:
-            self.last_cell = self.min_cell
-        return self.last_cell
-
-class ServerProxy():
-    def init(self, robot_name):
-        pass
-
-    def move(self, robot_name, cell):
-        pass
-
-class Robot():
-    def __init__(self, name, server_proxy, next_cell_calculator):
-        self.name = name
-        self.server_proxy = server_proxy
-        self.next_cell_calculator = next_cell_calculator
-        self.score = 0
-        self.status = ""
-
-    def start(self, total_moves):
-        self.server_proxy.init(self.name)
-        for x in range(total_moves):
-            next_cell = self.next_cell_calculator.next()
-            status, move_score = self.server_proxy.move(
-                                    self.name, next_cell)
-            self.status = status
-
-            if status == "GameOver":
-                break
-
-            if status == "YouWin":
-                self.score += move_score
-                break
-
-            self.score += move_score

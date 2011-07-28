@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="155a3fee-d026-4c54-9c2c-d408be655011" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integration_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/robot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit.py" afterPath="$PROJECT_DIR$/unit.py" />
     </list>
     <ignored path="roboexplorer.iws" />
@@ -26,10 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="unit.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="unit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="62" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.84504795">
+            <state line="3" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="integration_test.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/integration_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="19" selection-start="196" selection-end="196" vertical-scroll-proportion="0.18581907">
               <folding />
             </state>
           </provider>
@@ -67,7 +86,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/unit.py" />
+        <option value="$PROJECT_DIR$/integration_test.py" />
       </list>
     </option>
   </component>
@@ -128,7 +149,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Python's unittest.Unittests in RobotMovesTests.test_move_to_cell_severals_times">
+  <component name="RunManager" selected="Python's unittest.Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum">
     <configuration default="false" name="Unittests in RobotTest" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -207,6 +228,25 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="roboexplorer" />
+      <option name="SCRIPT_NAME" value="unit.py" />
+      <option name="CLASS_NAME" value="ServerProxyTests" />
+      <option name="METHOD_NAME" value="test_no_more_than_one_move_at_a_minimum" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="PUREUNITTEST" value="true" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,11 +280,12 @@
       <option name="PATTERN" value="" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest" />
       <item index="1" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell" />
       <item index="2" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell_one_time" />
       <item index="3" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotMovesTests.test_move_to_cell_severals_times" />
+      <item index="4" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -282,9 +323,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24410774" sideWeight="0.6563945" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24410774" sideWeight="0.6567164" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990755" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34360555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3432836" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -355,7 +396,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="62" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.84504795">
+        <state line="3" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="19" selection-start="196" selection-end="196" vertical-scroll-proportion="0.18581907">
           <folding />
         </state>
       </provider>
