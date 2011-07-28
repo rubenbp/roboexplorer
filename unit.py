@@ -61,7 +61,6 @@ class RobotMovesTests(unittest.TestCase):
         self.robot.start(total_moves = 2)
 
         assert_that(self.robot.status, equal_to("GameOver"))
-        assert_that(self.robot.score, equal_to(0))
 
     def test_win_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("YouWin",10))
