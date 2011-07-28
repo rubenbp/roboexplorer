@@ -47,7 +47,10 @@ class Robot():
         self.status = ""
 
     def start(self, total_moves):
-        self.server_proxy.init(self.name)
+        status = self.server_proxy.init(self.name)
+        if status == "GameOver":
+            return
+        
         for x in range(total_moves):
             next_cell = self.next_cell_calculator.next()
             status, score = self.server_proxy.move(

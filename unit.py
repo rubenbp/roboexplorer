@@ -30,6 +30,13 @@ class RobotInitializeTest(unittest.TestCase):
         assert_that_method(self.server_proxy.init
             ).was_called().with_args("robocop")
 
+    def test_with_gameover_no_movements_are_made(self):
+        when(self.server_proxy.init).then_return("GameOver")
+
+        self.robot.start(2)
+
+        assert_that_method(self.server_proxy.move).was_never_called()
+
     def test_move_to_cell_one_time(self):
         self.robot.start(1)
 
