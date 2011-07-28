@@ -56,10 +56,11 @@ class Robot():
             status, score = self.server_proxy.move(
                                     self.name, next_cell)
             self.status = status
-            self.score = score
-
+            
             if status == "GameOver" or status == "YouWin":
                 break
+
+            self.score = score
 
 class NextCellCalculator():
     def __init__(self, min_cell, max_cell):
