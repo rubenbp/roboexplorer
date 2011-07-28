@@ -7,7 +7,7 @@ class ServerProxy():
         self.url_generator = url_generator
 
     def init(self, robot_name):
-        pass
+        init_url = self.url_generator.init_url(robot_name)
 
     def move(self, robot_name, cell):
         move_url = self.url_generator.move_url(robot_name, cell)
@@ -20,6 +20,9 @@ class UrlGenerator():
     def move_url(self, robot_name, cell):
         pass
 
+    def init_url(self, robot_name):
+        pass
+    
 class Robot():
     def __init__(self, name, server_proxy, next_cell_calculator):
         self.name = name

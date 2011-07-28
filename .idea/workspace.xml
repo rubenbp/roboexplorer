@@ -35,19 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="robot.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="robot.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="263" selection-end="271" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.46454766">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integration_test.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="integration_test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/integration_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="45" selection-start="795" selection-end="795" vertical-scroll-proportion="0.23232323">
+            <state line="37" column="45" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/unit.py" />
-        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/integration_test.py" />
+        <option value="$PROJECT_DIR$/robot.py" />
       </list>
     </option>
   </component>
@@ -384,13 +384,6 @@
         <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="263" selection-end="271" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="20" selection-start="1316" selection-end="1332" vertical-scroll-proportion="0.0">
@@ -400,7 +393,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/integration_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="45" selection-start="795" selection-end="795" vertical-scroll-proportion="0.23232323">
+        <state line="37" column="45" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.46454766">
           <folding />
         </state>
       </provider>

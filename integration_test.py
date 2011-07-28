@@ -7,12 +7,10 @@ from robot import *
 
 __author__ = 'rubenbp'
 
-
 class ServerProxyTests(unittest.TestCase):
 
     def setUp(self):
-        base_url = "http://188.165.135.37:81/test?reponse=MoveOK&"
-        self.url_generator_spy = spy(UrlGenerator(base_url))
+        self.url_generator_spy = spy(UrlGenerator(None))
         when(self.url_generator_spy.move_url).then_return("http://fake/")
 
         self.server_proxy = ServerProxy(self.url_generator_spy)
@@ -27,8 +25,14 @@ class ServerProxyTests(unittest.TestCase):
             (time2 - time1).microseconds,
             greater_than_or_equal_to(200))
 
-    def test_use_url_server_generator(self):
+    def test_use_url_server_generator_to_move(self):
         self.server_proxy.move("robocop", 10)
 
         assert_that_method(self.url_generator_spy.move_url
             ).was_called().with_args("robocop",10)
+
+    def test_use_url_server_generator_to_init(self):
+        self.server_proxy.init("robocop")
+
+        assert_that_method(self.url_generator_spy.init_url
+            ).was_called().with_args("robocop")
