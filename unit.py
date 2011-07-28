@@ -8,7 +8,7 @@ from pyDoubles.framework import *
 
 __author__ = 'rubenbp'
 
-class RobotTest(unittest.TestCase):
+class RobotInitializeTest(unittest.TestCase):
     def setUp(self):
         self.server_proxy = spy(ServerProxy())
         when(self.server_proxy.move).then_return(("OK", 10))
@@ -53,7 +53,6 @@ class RobotMovesTests(unittest.TestCase):
         self.robot.start(total_moves = 2)
 
         assert_that_method(server_proxy_spy.move).was_called().times(2)
-        assert_that(self.robot.score, equal_to(20))
 
     def test_game_over_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("GameOver", 0))
@@ -83,7 +82,7 @@ class RobotMovesTests(unittest.TestCase):
 
 class NextCellCalculatorTests(unittest.TestCase):
 
-    def test_return_next_cell_in_range(self):
+    def test_return_next_cell_in_valid_range(self):
         next_cell_calculator = NextCellCalculator(0, 100)
         for x in range(999):
             assert_that(
@@ -125,7 +124,7 @@ class Robot():
         self.next_cell_calculator = next_cell_calculator
         self.score = 0
         self.status = ""
-        
+
     def start(self, total_moves):
         self.server_proxy.init(self.name)
         for x in range(total_moves):
