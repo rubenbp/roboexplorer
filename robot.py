@@ -29,7 +29,7 @@ class UrlGenerator():
         return self.base_url + "player=%s&command=Move&position=%s" % (robot_name, cell)
 
     def init_url(self, robot_name):
-        pass
+        return self.base_url + "player=%s&command=Init" % robot_name
     
 class Robot():
     def __init__(self, name, server_proxy, next_cell_calculator):

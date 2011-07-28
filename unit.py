@@ -105,6 +105,16 @@ class UrlGeneratorTest(unittest.TestCase):
 
         result_url = url_generator.move_url("robocop", 30)
 
+        assert_that(result_url, contains_string("http://fake/"))
         assert_that(result_url, contains_string("player=robocop"))
         assert_that(result_url, contains_string("command=Move"))
         assert_that(result_url, contains_string("position=30"))
+
+    def test_make_init_url(self):
+        url_generator = UrlGenerator("http://fake/")
+
+        result_url = url_generator.init_url("robocop")
+
+        assert_that(result_url, contains_string("http://fake/"))
+        assert_that(result_url, contains_string("player=robocop"))
+        assert_that(result_url, contains_string("command=Init"))
