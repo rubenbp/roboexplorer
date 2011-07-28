@@ -26,7 +26,7 @@ class UrlGenerator():
         self.base_url = base_url
 
     def move_url(self, robot_name, cell):
-        pass
+        return self.base_url + "player=%s&command=Move&position=%s" % (robot_name, cell)
 
     def init_url(self, robot_name):
         pass

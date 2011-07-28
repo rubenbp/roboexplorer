@@ -98,3 +98,13 @@ class NextCellCalculatorTests(unittest.TestCase):
             assert_that(
                 next_cell_calculator.next(),
                 is_not(equal_to(next_cell_calculator.next())))
+
+class UrlGeneratorTest(unittest.TestCase):
+    def test_make_move_url(self):
+        url_generator = UrlGenerator("http://fake/")
+
+        result_url = url_generator.move_url("robocop", 30)
+
+        assert_that(result_url, contains_string("player=robocop"))
+        assert_that(result_url, contains_string("command=Move"))
+        assert_that(result_url, contains_string("position=30"))
