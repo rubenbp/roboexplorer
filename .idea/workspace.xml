@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="155a3fee-d026-4c54-9c2c-d408be655011" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_test.py" afterPath="$PROJECT_DIR$/integration_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot.py" afterPath="$PROJECT_DIR$/robot.py" />
     </list>
     <ignored path="roboexplorer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="robot.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="1.393643">
+            <state line="12" column="23" selection-start="233" selection-end="233" vertical-scroll-proportion="0.4180929">
               <folding />
             </state>
           </provider>
@@ -84,9 +84,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/unit.py" />
         <option value="$PROJECT_DIR$/integration_test.py" />
+        <option value="$PROJECT_DIR$/robot.py" />
       </list>
     </option>
   </component>
@@ -392,13 +392,6 @@
         <state line="48" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/integration_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="40" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
@@ -406,9 +399,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="1.393643">
+        <state line="12" column="23" selection-start="233" selection-end="233" vertical-scroll-proportion="0.4180929">
           <folding />
         </state>
       </provider>

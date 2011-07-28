@@ -1,3 +1,5 @@
+import time
+
 __author__ = 'rubenbp'
 
 class ServerProxy():
@@ -8,7 +10,7 @@ class ServerProxy():
         pass
 
     def move(self, robot_name, cell):
-        time.sleep(1)
+        time.sleep(0.2)
 
 class Robot():
     def __init__(self, name, server_proxy, next_cell_calculator):
