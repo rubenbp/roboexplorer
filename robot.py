@@ -18,7 +18,10 @@ class ServerProxy():
         result = self._get_json_from_url(move_url)
         time.sleep(0.2)
         if result.has_key("score"):
+            print("new move: status '%s' & score '%s'" % (result["status"], result["score"]))
             return result["status"],result["score"]
+
+        #need only for testing
         return result["status"], 0
 
     def _get_json_from_url(self, url):
