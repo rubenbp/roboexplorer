@@ -4,6 +4,7 @@ from hamcrest.core.core.allof import all_of
 from hamcrest.core.core.isequal import equal_to
 from hamcrest.core.core.isnot import is_not
 from hamcrest.library.number.ordering_comparison import greater_than_or_equal_to, less_than_or_equal_to
+from hamcrest.library.text.stringcontains import contains_string
 from pyDoubles.framework import *
 from robot import *
 
