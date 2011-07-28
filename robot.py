@@ -11,6 +11,7 @@ class ServerProxy():
     def init(self, robot_name):
         init_url = self.url_generator.init_url(robot_name)
         result = self._get_json_from_url(init_url)
+        print("init game: status '%s'" % result["status"])
         return result["status"]
 
     def move(self, robot_name, cell):
