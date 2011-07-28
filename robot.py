@@ -50,16 +50,19 @@ class Robot():
         status = self.server_proxy.init(self.name)
         if status == "GameOver":
             return
-        
+
+        last_score = 0
         for x in range(total_moves):
             next_cell = self.next_cell_calculator.next()
-            status, score = self.server_proxy.move(
+            self.status, score = self.server_proxy.move(
                                     self.name, next_cell)
-            self.status = status
-            
+
             if status == "GameOver" or status == "YouWin":
                 break
 
+            score_of_this_movement = score - last_score
+            self.next_cell_calculator.register_cell_score(next_cell, score_of_this_movement)
+            last_score = score
             self.score = score
 
 class NextCellCalculator():
@@ -67,9 +70,13 @@ class NextCellCalculator():
         self.min_cell = min_cell
         self.max_cell = max_cell
         self.last_cell = self.min_cell
+        self.cell_scores = {}
 
     def next(self):
         self.last_cell += 15
         if self.last_cell > self.max_cell:
             self.last_cell = self.min_cell
         return self.last_cell
+
+    def register_cell_score(self, cell, score):
+        self.cell_scores[cell] = score

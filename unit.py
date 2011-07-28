@@ -87,24 +87,40 @@ class RobotMovesTests(unittest.TestCase):
 
         assert_that_method(next_cell_calculator.next).was_called()
 
+    def test_register_movement_in_cell_calculator(self):
+        next_cell_calculator = spy(NextCellCalculator(0, 100))
+        when(next_cell_calculator.next).then_return(10)
+        self.robot.next_cell_calculator = next_cell_calculator
+        when(self.server_proxy_stub.move).then_return(("OK",15))
+
+        self.robot.start(total_moves = 1)
+
+        assert_that_method(next_cell_calculator.register_cell_score
+            ).was_called().with_args(10, 15)
         
 class NextCellCalculatorTests(unittest.TestCase):
 
+    def setUp(self):
+        self.next_cell_calculator = NextCellCalculator(0, 100)
+
     def test_return_next_cell_in_valid_range(self):
-        next_cell_calculator = NextCellCalculator(0, 100)
         for x in range(999):
             assert_that(
-                next_cell_calculator.next(),
+                self.next_cell_calculator.next(),
                 all_of(greater_than_or_equal_to(0),
                         less_than_or_equal_to(100)))
 
     def test_dont_return_twice_the_same_number(self):
-        next_cell_calculator = NextCellCalculator(0, 100)
-
         for x in range(100):
             assert_that(
-                next_cell_calculator.next(),
-                is_not(equal_to(next_cell_calculator.next())))
+                self.next_cell_calculator.next(),
+                is_not(equal_to(self.next_cell_calculator.next())))
+
+    def test_dont_register_same_cell_twice(self):
+        self.next_cell_calculator.register_cell_score(cell = 1, score = 10)
+        self.next_cell_calculator.register_cell_score(cell = 1, score = 10)
+
+        assert_that(len(self.next_cell_calculator.cell_scores), equal_to(1))
 
 class UrlGeneratorTest(unittest.TestCase):
     def test_make_move_url(self):
