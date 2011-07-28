@@ -3,14 +3,22 @@ import time
 __author__ = 'rubenbp'
 
 class ServerProxy():
-    def __init__(self, base_url):
-        self.base_url = base_url
+    def __init__(self, url_generator):
+        self.url_generator = url_generator
 
     def init(self, robot_name):
         pass
 
     def move(self, robot_name, cell):
+        move_url = self.url_generator.move_url(robot_name, cell)
         time.sleep(0.2)
+
+class UrlGenerator():
+    def __init__(self, base_url):
+        self.base_url = base_url
+
+    def move_url(self, robot_name, cell):
+        pass
 
 class Robot():
     def __init__(self, name, server_proxy, next_cell_calculator):

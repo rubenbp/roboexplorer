@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="155a3fee-d026-4c54-9c2c-d408be655011" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit.py" afterPath="$PROJECT_DIR$/unit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integration_test.py" afterPath="$PROJECT_DIR$/integration_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot.py" afterPath="$PROJECT_DIR$/robot.py" />
     </list>
     <ignored path="roboexplorer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="unit.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="unit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2145" selection-end="2145" vertical-scroll-proportion="-0.9671717">
+            <state line="39" column="20" selection-start="1316" selection-end="1332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -37,16 +38,16 @@
       <file leaf-file-name="robot.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="14" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+            <state line="12" column="46" selection-start="263" selection-end="271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integration_test.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="integration_test.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/integration_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+            <state line="22" column="45" selection-start="795" selection-end="795" vertical-scroll-proportion="0.23232323">
               <folding />
             </state>
           </provider>
@@ -56,15 +57,6 @@
         <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/core.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="framework.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/framework.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,9 +76,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/integration_test.py" />
-        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/unit.py" />
+        <option value="$PROJECT_DIR$/robot.py" />
+        <option value="$PROJECT_DIR$/integration_test.py" />
       </list>
     </option>
   </component>
@@ -147,28 +139,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Python's unittest.Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum">
-    <configuration default="false" name="Unittests in RobotTest" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="roboexplorer" />
-      <option name="SCRIPT_NAME" value="unit.py" />
-      <option name="CLASS_NAME" value="RobotTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="PUREUNITTEST" value="true" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python's unittest.Unittests in ServerProxyTests.test_use_url_server_generator">
     <configuration default="false" name="Unittests in RobotTest.test_move_to_cell" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -245,6 +216,25 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Unittests in ServerProxyTests.test_use_url_server_generator" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="roboexplorer" />
+      <option name="SCRIPT_NAME" value="integration_test.py" />
+      <option name="CLASS_NAME" value="ServerProxyTests" />
+      <option name="METHOD_NAME" value="test_use_url_server_generator" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="PUREUNITTEST" value="true" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,11 +269,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest" />
-      <item index="1" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell" />
-      <item index="2" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell_one_time" />
-      <item index="3" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotMovesTests.test_move_to_cell_severals_times" />
-      <item index="4" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum" />
+      <item index="0" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell" />
+      <item index="1" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotTest.test_move_to_cell_one_time" />
+      <item index="2" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotMovesTests.test_move_to_cell_severals_times" />
+      <item index="3" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_no_more_than_one_move_at_a_minimum" />
+      <item index="4" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_use_url_server_generator" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -382,33 +372,35 @@
         <state line="357" column="0" selection-start="12336" selection-end="12336" vertical-scroll-proportion="0.33147633" />
       </provider>
     </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/framework.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/framework.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/integration_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="40" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+        <state line="12" column="46" selection-start="263" selection-end="271" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2145" selection-end="2145" vertical-scroll-proportion="-0.9671717">
+        <state line="39" column="20" selection-start="1316" selection-end="1332" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="45" selection-start="795" selection-end="795" vertical-scroll-proportion="0.23232323">
           <folding />
         </state>
       </provider>
