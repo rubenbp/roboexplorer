@@ -10,16 +10,19 @@ class ServerProxy():
 
     def init(self, robot_name):
         init_url = self.url_generator.init_url(robot_name)
-        result = simplejson.load(urllib2.build_opener().open(urllib2.Request(init_url)))
+        result = self._get_json_from_url(init_url)
         return result["status"]
 
     def move(self, robot_name, cell):
         move_url = self.url_generator.move_url(robot_name, cell)
-        result = simplejson.load(urllib2.build_opener().open(urllib2.Request(move_url)))
+        result = self._get_json_from_url(move_url)
         time.sleep(0.2)
         if result.has_key("score"):
             return result["status"],result["score"]
         return result["status"], 0
+
+    def _get_json_from_url(self, url):
+        return simplejson.load(urllib2.build_opener().open(urllib2.Request(url)))
 
 class UrlGenerator():
     def __init__(self, base_url):
