@@ -69,7 +69,7 @@ class NextCellCalculator():
         self.last_cell = self.min_cell
 
     def next(self):
-        self.last_cell += 1
+        self.last_cell += 15
         if self.last_cell > self.max_cell:
             self.last_cell = self.min_cell
         return self.last_cell

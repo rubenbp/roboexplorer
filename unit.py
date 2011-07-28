@@ -76,18 +76,18 @@ class RobotMovesTests(unittest.TestCase):
         self.robot.start(total_moves = 2)
 
         assert_that(self.robot.status, equal_to("YouWin"))
-        assert_that(self.robot.score, equal_to(10))
 
     def test_robot_use_next_cell_calculator(self):
-        next_cell_calculator = mock(NextCellCalculator(0, 100))
-        expect_call(next_cell_calculator.next).returning(10)
+        next_cell_calculator = spy(NextCellCalculator(0, 100))
+        when(next_cell_calculator.next).then_return(10)
         self.robot.next_cell_calculator = next_cell_calculator
         when(self.server_proxy_stub.move).then_return(("OK",10))
 
         self.robot.start(total_moves = 1)
 
-        next_cell_calculator.assert_that_is_satisfied()
+        assert_that_method(next_cell_calculator.next).was_called()
 
+        
 class NextCellCalculatorTests(unittest.TestCase):
 
     def test_return_next_cell_in_valid_range(self):
