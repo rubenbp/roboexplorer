@@ -41,7 +41,8 @@ class RobotInitializeTest(unittest.TestCase):
 class RobotMovesTests(unittest.TestCase):
     def setUp(self):
         self.server_proxy_spy = spy(ServerProxy)
-        self.next_cell_calculator = stub(NextCellCalculator(0, 100))
+
+        self.next_cell_calculator = spy(NextCellCalculator(0, 100))
         when(self.next_cell_calculator.next).then_return(10)
 
         self.robot = Robot(
@@ -78,16 +79,23 @@ class RobotMovesTests(unittest.TestCase):
         assert_that(self.robot.status, equal_to("YouWin"))
         assert_that(self.robot.total_moves, equal_to(1))
 
+class RobotUsingNextCellCalculatorTests(unittest.TestCase):
+    def setUp(self):
+        self.server_proxy_stub = stub(ServerProxy)
+        when(self.server_proxy_stub.move).then_return(("OK", 10))
+
+        self.next_cell_calculator = spy(NextCellCalculator(0, 100))
+        when(self.next_cell_calculator.next).then_return(10)
+
+        self.robot = Robot(
+            "robocop", self.server_proxy_stub, self.next_cell_calculator)
+
     def test_robot_use_next_cell_calculator(self):
-        when(self.server_proxy_spy.move).then_return(("OK", 10))
-        
         self.robot.start(max_moves = 1)
 
         assert_that_method(self.next_cell_calculator.next).was_called()
 
     def test_register_movement_in_cell_calculator(self):
-        when(self.server_proxy_spy.move).then_return(("OK", 10))
-        
         self.robot.start(max_moves = 1)
 
         assert_that_method(self.next_cell_calculator.register_cell_score

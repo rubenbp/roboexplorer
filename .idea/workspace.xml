@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="unit.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="unit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="50" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-0.053497944">
+            <state line="121" column="0" selection-start="4299" selection-end="4299" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integration_test.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="integration_test.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/integration_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="43" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0">
+            <state line="6" column="19" selection-start="306" selection-end="306" vertical-scroll-proportion="-0.7777778">
               <folding />
             </state>
           </provider>
@@ -409,11 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="43" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="40" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.0">
@@ -423,7 +418,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="50" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-0.053497944">
+        <state line="121" column="0" selection-start="4299" selection-end="4299" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="306" selection-end="306" vertical-scroll-proportion="-0.7777778">
           <folding />
         </state>
       </provider>
