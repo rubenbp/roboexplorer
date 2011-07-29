@@ -19,12 +19,11 @@ class ServerProxy():
         result = self._get_json_from_url(move_url)
         time.sleep(0.2)
         if result.has_key("score"):
-            print(
-                "new move to %s: status '%s' & score '%s'" %
-                (cell, result["status"], result["score"]))
+            print("new move to %s: status '%s' & score '%s'" %
+                  (cell, result["status"], result["score"]))
             return result["status"],result["score"]
 
-        #need only for testing
+        print("new move to %s: status '%s'" % (cell, result["status"]))
         return result["status"], 0
 
     def _get_json_from_url(self, url):
@@ -58,7 +57,7 @@ class Robot():
         for x in range(max_moves):
             next_cell = self.next_cell_calculator.next()
             self.total_moves = self.total_moves + 1
-            print("Move number %s" % self.total_moves)
+            print("Move %s" % self.total_moves)
             self.status, score = self.server_proxy.move(self.name, next_cell)
 
             if self.status == "GameOver" or self.status == "YouWin" or self.status == "NoGame":
@@ -77,7 +76,7 @@ class NextCellCalculator():
         self.cell_scores = {}
         self.seek = self.min_cell_index
         self.min_cell_score_to_move = 30
-        self.jump = 95
+        self.jump = 22
 
     def next(self):
         if self._get_cell_with_max_score() is not None and \
