@@ -3,6 +3,7 @@ from hamcrest.core.assert_that import assert_that
 from hamcrest.core.core.allof import all_of
 from hamcrest.core.core.isequal import equal_to
 from hamcrest.core.core.isnot import is_not
+from hamcrest.library.collection.isdict_containing import has_entry
 from hamcrest.library.number.ordering_comparison import greater_than_or_equal_to, less_than_or_equal_to
 from hamcrest.library.text.stringcontains import contains_string
 from pyDoubles.framework import *
@@ -116,11 +117,26 @@ class NextCellCalculatorTests(unittest.TestCase):
                 self.next_cell_calculator.next(),
                 is_not(equal_to(self.next_cell_calculator.next())))
 
+    def test_register_severals_cells(self):
+        self.next_cell_calculator.register_cell_score(1, 10)
+        self.next_cell_calculator.register_cell_score(2, 30)
+
+        assert_that(len(self.next_cell_calculator.cell_scores), equal_to(2))
+        assert_that(self.next_cell_calculator.cell_scores, has_entry(1, 10))
+        assert_that(self.next_cell_calculator.cell_scores, has_entry(2, 30))
+
     def test_dont_register_same_cell_twice(self):
-        self.next_cell_calculator.register_cell_score(cell = 1, score = 10)
-        self.next_cell_calculator.register_cell_score(cell = 1, score = 10)
+        self.next_cell_calculator.register_cell_score(1, 10)
+        self.next_cell_calculator.register_cell_score(1, 10)
 
         assert_that(len(self.next_cell_calculator.cell_scores), equal_to(1))
+
+    def test_register_last_cell_score(self):
+        self.next_cell_calculator.register_cell_score(1, 10)
+        self.next_cell_calculator.register_cell_score(2, 30)
+
+        assert_that(self.next_cell_calculator.last_cell.index, equal_to(2))
+        assert_that(self.next_cell_calculator.last_cell.score, equal_to(30))
 
 class UrlGeneratorTest(unittest.TestCase):
     def test_make_move_url(self):

@@ -67,16 +67,24 @@ class Robot():
 
 class NextCellCalculator():
     def __init__(self, min_cell, max_cell):
-        self.min_cell = min_cell
-        self.max_cell = max_cell
-        self.last_cell = self.min_cell
+        self.min_cell_index = min_cell
+        self.max_cell_index = max_cell
+        self.last_cell = Cell(self.min_cell_index, -1)
         self.cell_scores = {}
 
     def next(self):
-        self.last_cell += 15
-        if self.last_cell > self.max_cell:
-            self.last_cell = self.min_cell
-        return self.last_cell
+        next_cell_index = self.last_cell.index + 15
+        if next_cell_index > self.max_cell_index:
+            self.last_cell = Cell(self.min_cell_index)
+        else:
+            self.last_cell = Cell(next_cell_index)
+        return self.last_cell.index
 
-    def register_cell_score(self, cell, score):
-        self.cell_scores[cell] = score
+    def register_cell_score(self, cell_index, cell_score):
+        self.cell_scores[cell_index] = cell_score
+        self.last_cell = Cell(cell_index, cell_score)
+
+class Cell():
+    def __init__(self, index, score = -1):
+        self.index = index
+        self.score = score
