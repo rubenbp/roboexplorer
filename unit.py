@@ -26,7 +26,7 @@ class RobotInitializeTest(unittest.TestCase):
         assert_that(self.robot.score, equal_to(0))
 
     def test_initialize_the_game(self):
-        self.robot.start(1)
+        self.robot.start(max_moves = 1)
 
         assert_that_method(self.server_proxy.init
             ).was_called().with_args("robocop")
@@ -34,16 +34,9 @@ class RobotInitializeTest(unittest.TestCase):
     def test_with_gameover_no_movements_are_made(self):
         when(self.server_proxy.init).then_return("GameOver")
 
-        self.robot.start(2)
+        self.robot.start(max_moves = 2)
 
         assert_that_method(self.server_proxy.move).was_never_called()
-
-    def test_move_to_cell_one_time(self):
-        self.robot.start(1)
-
-        assert_that_method(self.server_proxy.move
-            ).was_called().with_args("robocop", ANY_ARG)
-        assert_that(self.robot.score, equal_to(10))
 
 class RobotMovesTests(unittest.TestCase):
     def setUp(self):
