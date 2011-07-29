@@ -60,21 +60,21 @@ class RobotMovesTests(unittest.TestCase):
         when(server_proxy_spy.move).then_return(("OK", 10))
         self.robot.server_proxy = server_proxy_spy
 
-        self.robot.start(total_moves = 2)
+        self.robot.start(max_moves = 2)
 
         assert_that_method(server_proxy_spy.move).was_called().times(2)
 
     def test_game_over_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("GameOver", 0))
 
-        self.robot.start(total_moves = 2)
+        self.robot.start(max_moves = 2)
 
         assert_that(self.robot.status, equal_to("GameOver"))
 
     def test_win_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("YouWin",10))
 
-        self.robot.start(total_moves = 2)
+        self.robot.start(max_moves = 2)
 
         assert_that(self.robot.status, equal_to("YouWin"))
 
@@ -84,7 +84,7 @@ class RobotMovesTests(unittest.TestCase):
         self.robot.next_cell_calculator = next_cell_calculator
         when(self.server_proxy_stub.move).then_return(("OK",10))
 
-        self.robot.start(total_moves = 1)
+        self.robot.start(max_moves = 1)
 
         assert_that_method(next_cell_calculator.next).was_called()
 
@@ -94,7 +94,7 @@ class RobotMovesTests(unittest.TestCase):
         self.robot.next_cell_calculator = next_cell_calculator
         when(self.server_proxy_stub.move).then_return(("OK",15))
 
-        self.robot.start(total_moves = 1)
+        self.robot.start(max_moves = 1)
 
         assert_that_method(next_cell_calculator.register_cell_score
             ).was_called().with_args(10, 15)
