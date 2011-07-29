@@ -19,7 +19,9 @@ class ServerProxy():
         result = self._get_json_from_url(move_url)
         time.sleep(0.2)
         if result.has_key("score"):
-            print("new move: status '%s' & score '%s'" % (result["status"], result["score"]))
+            print(
+                "new move to %s: status '%s' & score '%s'" %
+                (cell, result["status"], result["score"]))
             return result["status"],result["score"]
 
         #need only for testing
@@ -71,14 +73,39 @@ class NextCellCalculator():
         self.max_cell_index = max_cell
         self.last_cell = Cell(self.min_cell_index, -1)
         self.cell_scores = {}
+        self.seek = self.min_cell_index
+        self.jump = 6
 
     def next(self):
-        next_cell_index = self.last_cell.index + 15
-        if next_cell_index > self.max_cell_index:
-            self.last_cell = Cell(self.min_cell_index)
+        if self._get_cell_with_max_score() is not None and \
+           self._get_cell_with_max_score().index != self.last_cell.index and \
+           self._is_valid_next_cell(self._get_cell_with_max_score().index):
+            next_cell_index = self._get_cell_with_max_score().index
         else:
-            self.last_cell = Cell(next_cell_index)
+            while True:
+                self.seek = self.seek + self.jump
+                next_cell_index = self.seek % self.max_cell_index
+                if self._is_valid_next_cell(next_cell_index):
+                    break
+                    
+        self.last_cell = Cell(next_cell_index)
         return self.last_cell.index
+
+    def _is_valid_next_cell(self, cell_index):
+        if cell_index < self.min_cell_index or \
+           cell_index > self.max_cell_index:
+            return False
+        if self.cell_scores.has_key(cell_index) and \
+           self.cell_scores[cell_index] == 0:
+            return False
+        return True
+
+    def _get_cell_with_max_score(self):
+        result = None
+        for key in self.cell_scores.keys():
+            if result is None or self.cell_scores[key] > result.score:
+                result = Cell(key, self.cell_scores[key])
+        return result
 
     def register_cell_score(self, cell_index, cell_score):
         self.cell_scores[cell_index] = cell_score

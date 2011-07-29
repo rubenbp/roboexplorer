@@ -103,6 +103,7 @@ class NextCellCalculatorTests(unittest.TestCase):
 
     def setUp(self):
         self.next_cell_calculator = NextCellCalculator(0, 100)
+        self.next_cell_calculator.jump = 1
 
     def test_return_next_cell_in_valid_range(self):
         for x in range(999):
@@ -112,7 +113,7 @@ class NextCellCalculatorTests(unittest.TestCase):
                         less_than_or_equal_to(100)))
 
     def test_dont_return_twice_the_same_number(self):
-        for x in range(100):
+        for x in range(500):
             assert_that(
                 self.next_cell_calculator.next(),
                 is_not(equal_to(self.next_cell_calculator.next())))
@@ -137,6 +138,20 @@ class NextCellCalculatorTests(unittest.TestCase):
 
         assert_that(self.next_cell_calculator.last_cell.index, equal_to(2))
         assert_that(self.next_cell_calculator.last_cell.score, equal_to(30))
+
+    def test_move_to_high_cell_score(self):
+
+        self.next_cell_calculator.cell_scores = {1:10, 2:20, 3:5}
+        self.next_cell_calculator.last_cell = Cell(3,5)
+
+        assert_that(self.next_cell_calculator.next(), equal_to(2))
+
+    def test_dont_move_to_zero_cell_score(self):
+        self.next_cell_calculator.cell_scores = {2:0, 3:0}
+        self.next_cell_calculator.seek = 1
+        self.next_cell_calculator.last_cell = Cell(1,5)
+
+        assert_that(self.next_cell_calculator.next(), equal_to(4))
 
 class UrlGeneratorTest(unittest.TestCase):
     def test_make_move_url(self):

@@ -29,7 +29,16 @@
       <file leaf-file-name="unit.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="0" selection-start="5026" selection-end="5026" vertical-scroll-proportion="0.81155777">
+            <state line="148" column="27" selection-start="5487" selection-end="5487" vertical-scroll-proportion="0.5703518">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python2.7/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="321" column="0" selection-start="10668" selection-end="10668" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -38,7 +47,7 @@
       <file leaf-file-name="robot.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="49" selection-start="2849" selection-end="2849" vertical-scroll-proportion="0.0">
+            <state line="64" column="11" selection-start="1932" selection-end="2070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -78,8 +87,8 @@
       <list>
         <option value="$PROJECT_DIR$/integration_test.py" />
         <option value="$PROJECT_DIR$/execute.py" />
-        <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/unit.py" />
+        <option value="$PROJECT_DIR$/robot.py" />
       </list>
     </option>
   </component>
@@ -140,45 +149,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Python's unittest.Unittests in RobotMovesTests.test_register_movement_in_cell_calculator">
-    <configuration default="false" name="Unittests in ServerProxyTests.test_use_url_server_generator" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="roboexplorer" />
-      <option name="SCRIPT_NAME" value="integration_test.py" />
-      <option name="CLASS_NAME" value="ServerProxyTests" />
-      <option name="METHOD_NAME" value="test_use_url_server_generator" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="PUREUNITTEST" value="true" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in ServerProxyTests.test_can_init_the_game" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <module name="roboexplorer" />
-      <option name="SCRIPT_NAME" value="integration_test.py" />
-      <option name="CLASS_NAME" value="ServerProxyTests" />
-      <option name="METHOD_NAME" value="test_can_init_the_game" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="PUREUNITTEST" value="true" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python's unittest.Unittests in NextCellCalculatorTests.test_dont_move_to_zero_cell_score">
     <configuration default="false" name="Unittests in ServerProxyTests.test_can_move_to_cell" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,6 +206,44 @@
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Unittests in NextCellCalculatorTests.test_move_to_high_cell_score" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="roboexplorer" />
+      <option name="SCRIPT_NAME" value="unit.py" />
+      <option name="CLASS_NAME" value="NextCellCalculatorTests" />
+      <option name="METHOD_NAME" value="test_move_to_high_cell_score" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="PUREUNITTEST" value="true" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in NextCellCalculatorTests.test_dont_move_to_zero_cell_score" type="PythonUnitTestConfigurationType" factoryName="Python's unittest" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="roboexplorer" />
+      <option name="SCRIPT_NAME" value="unit.py" />
+      <option name="CLASS_NAME" value="NextCellCalculatorTests" />
+      <option name="METHOD_NAME" value="test_dont_move_to_zero_cell_score" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="PUREUNITTEST" value="true" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,11 +292,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_use_url_server_generator" />
-      <item index="1" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_can_init_the_game" />
-      <item index="2" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_can_move_to_cell" />
-      <item index="3" class="java.lang.String" itemvalue="Python.execute" />
-      <item index="4" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotMovesTests.test_register_movement_in_cell_calculator" />
+      <item index="0" class="java.lang.String" itemvalue="Python's unittest.Unittests in ServerProxyTests.test_can_move_to_cell" />
+      <item index="1" class="java.lang.String" itemvalue="Python.execute" />
+      <item index="2" class="java.lang.String" itemvalue="Python's unittest.Unittests in RobotMovesTests.test_register_movement_in_cell_calculator" />
+      <item index="3" class="java.lang.String" itemvalue="Python's unittest.Unittests in NextCellCalculatorTests.test_move_to_high_cell_score" />
+      <item index="4" class="java.lang.String" itemvalue="Python's unittest.Unittests in NextCellCalculatorTests.test_dont_move_to_zero_cell_score" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -391,11 +400,6 @@
         <state line="298" column="8" selection-start="9730" selection-end="9730" vertical-scroll-proportion="-2.9682152" />
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="45" selection-start="10461" selection-end="10461" vertical-scroll-proportion="0.05107527" />
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/pyDoubles/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
@@ -413,16 +417,23 @@
         <state line="43" column="43" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file:///usr/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="0" selection-start="10668" selection-end="10668" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="49" selection-start="2849" selection-end="2849" vertical-scroll-proportion="0.0">
+        <state line="64" column="11" selection-start="1932" selection-end="2070" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="0" selection-start="5026" selection-end="5026" vertical-scroll-proportion="0.81155777">
+        <state line="148" column="27" selection-start="5487" selection-end="5487" vertical-scroll-proportion="0.5703518">
           <folding />
         </state>
       </provider>
