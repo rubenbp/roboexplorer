@@ -54,14 +54,14 @@ class Robot():
             return
 
         last_score = 0
-        total_moves = 0
+        self.total_moves = 0
         for x in range(max_moves):
             next_cell = self.next_cell_calculator.next()
-            total_moves = total_moves + 1
-            print("Move number %s" % total_moves)
+            self.total_moves = self.total_moves + 1
+            print("Move number %s" % self.total_moves)
             self.status, score = self.server_proxy.move(self.name, next_cell)
 
-            if status == "GameOver" or status == "YouWin":
+            if self.status == "GameOver" or self.status == "YouWin" or self.status == "NoGame":
                 break
 
             score_of_this_movement = score - last_score
@@ -76,8 +76,8 @@ class NextCellCalculator():
         self.last_cell = Cell(self.min_cell_index, -1)
         self.cell_scores = {}
         self.seek = self.min_cell_index
-        self.min_cell_score_to_move = 15
-        self.jump = 15
+        self.min_cell_score_to_move = 30
+        self.jump = 95
 
     def next(self):
         if self._get_cell_with_max_score() is not None and \

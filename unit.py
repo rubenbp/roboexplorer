@@ -67,9 +67,18 @@ class RobotMovesTests(unittest.TestCase):
     def test_game_over_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("GameOver", 0))
 
-        self.robot.start(max_moves = 2)
+        self.robot.start(max_moves = 10)
 
         assert_that(self.robot.status, equal_to("GameOver"))
+        assert_that(self.robot.total_moves, equal_to(1))
+
+    def test_stop_game_with_nogame_status(self):
+        when(self.server_proxy_stub.move).then_return(("NoGame", 0))
+
+        self.robot.start(max_moves = 10)
+
+        assert_that(self.robot.status, equal_to("NoGame"))
+        assert_that(self.robot.total_moves, equal_to(1))
 
     def test_win_in_a_move(self):
         when(self.server_proxy_stub.move).then_return(("YouWin",10))
@@ -141,7 +150,8 @@ class NextCellCalculatorTests(unittest.TestCase):
 
     def test_move_to_high_cell_score(self):
 
-        self.next_cell_calculator.cell_scores = {1:10, 2:20, 3:5}
+        self.next_cell_calculator.cell_scores = {1:10, 2:50, 3:5}
+        self.next_cell_calculator.seek = 3
         self.next_cell_calculator.last_cell = Cell(3,5)
 
         assert_that(self.next_cell_calculator.next(), equal_to(2))
