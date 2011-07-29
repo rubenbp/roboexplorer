@@ -153,6 +153,14 @@ class NextCellCalculatorTests(unittest.TestCase):
 
         assert_that(self.next_cell_calculator.next(), equal_to(4))
 
+    def test_dont_move_to_bad_cell_score(self):
+        self.next_cell_calculator.cell_scores = {2:8, 3:10}
+        self.next_cell_calculator.seek = 1
+        self.next_cell_calculator.min_cell_score_to_move = 12
+        self.next_cell_calculator.last_cell = Cell(1,5)
+
+        assert_that(self.next_cell_calculator.next(), equal_to(4))
+
 class UrlGeneratorTest(unittest.TestCase):
     def test_make_move_url(self):
         url_generator = UrlGenerator("http://fake/")
